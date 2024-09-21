@@ -27,6 +27,7 @@ module.exports = {
             filename: "./index.html",
         }),
         new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns: ['./js/build/*','./css/build/*'],
             // Simulate the removal of files
             dry: true,
             // Write Logs to Console

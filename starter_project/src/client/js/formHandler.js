@@ -5,8 +5,8 @@ import { checkForName } from './nameChecker'
 // const serverURL = 'https://wfkdhyvtzx.prod.udacity-student-workspaces.com/api'
 const serverURL = 'https://localhost:8000/api'
 
-const form = document.getElementById('urlForm');
-form.addEventListener('submit', handleSubmit);
+// const form = document.getElementById('urlForm');
+// form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault();
