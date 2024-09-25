@@ -8,31 +8,40 @@
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
+            <h1>Evaluate News with NLP</h1>
+
+            <div class="nav">
+                <ul>
+                  <div class="header_logo">Logo</div>
+                  <div id="resbar" class= "bar "><i class = "fa fa-bars"></i></div>
+                    <div id = "navItems" class = "nav-items">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                   </div>
+               </ul>
+              </div>
+
+
+
         </header>
 
         <main>
-            <section>
-                <div id="urlForm">
+            <section class="inputData">
+                <form id="urlForm">
                     <input id="name" type="text" name="url" placeholder="Enter URL" required>
                     <button id="submitButton" type="submit">Submit</button>
-                </div>
+                </form>
                 
             </section>
 
-            <section>
-                <strong>Form Results:</strong>
+            <section class="outputData">
+                <strong class="section_results">Form Results:</strong>
                 <div id="results"></div>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p></p>
         </footer>
 
     </body>

@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
 }
 
 main {
@@ -11,4 +12,15 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+.section_results{
+    position:relative;
+    top:5px;
+    z-index:1;
+    color: deeppink;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    font-weight: normal;
+    margin-bottom: 70px;
 }

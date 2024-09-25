@@ -8,19 +8,26 @@ const serverURL = 'https://localhost:8000/api'
 // const form = document.getElementById('urlForm');
 // form.addEventListener('submit', handleSubmit);
 
-function handleSubmit(event) {
+async function handleSubmit(event) {
     event.preventDefault();
 
-    // Get the URL from the input field
-    const formText = document.getElementById('name').value;
+    let url = document.getElementById('name').value;
+    try {
+        
+        const response = await fetch(`/api/submit-url?url=${encodeURIComponent(url)}`, {
+            method: 'GET',
+        });
+        
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
 
-    // This is an example code that checks the submitted name. You may remove it from your code
-    checkForName(formText);
-    
-    // Check if the URL is valid
- 
-        // If the URL is valid, send it to the server using the serverURL constant above
-      
+        const result = await response.json();
+        console.log('Response from server:', result);
+        document.getElementById('results').innerHTML = JSON.stringify(result);
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
 // Function to send data to the server

@@ -1,5 +1,91 @@
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 10px 40px;
 }
+
+.header_logo{
+  width:1.5in;
+	text-align:right;
+	display:inline-block;
+	padding-right:14px;
+  padding-top: 17px;
+}
+
+header h1{
+    position:relative;
+    top:5px;
+    z-index:1;
+    color: deeppink;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    font-weight: normal;
+    margin-bottom: 70px;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.bar{
+    display: flex;
+    justify-content: end;
+    align-items: center; 
+    color: white;
+    margin-right: 19px;
+    padding: 10px;
+  }
+
+  .nav-items{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    width: 50%;
+    color: white;
+    font-size: 20px;
+  }
+
+  .nav-items-zero{
+    display: none;
+  }
+
+  .nav-items-mob{
+    list-style: none;
+    background-color: grey;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    flex-direction: column;
+    width: calc(100% - 20px);
+    height: calc(100vh - 127px);
+    position: absolute;
+    right: 8px;
+    top: 122px;
+    left: 8px;
+    border-radius: 10px;
+    font-size: 25px;
+  }
+
+
+
+@media only screen and (min-width: 600px) {
+    .bar{
+      display: none;
+    }
+    
+    .nav-items-mob{
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .nav-items{
+      display: none;
+    }
+  }
+  
