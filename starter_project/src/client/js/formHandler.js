@@ -1,5 +1,5 @@
-// Replace checkForName with a function that checks the URL
-import { checkForName } from './nameChecker'
+// Replace checkUrl with a function that checks the URL
+import { checkUrl } from './nameChecker'
 
 // If working on Udacity workspace, update this with the Server API URL e.g. `https://wfkdhyvtzx.prod.udacity-student-workspaces.com/api`
 // const serverURL = 'https://wfkdhyvtzx.prod.udacity-student-workspaces.com/api'
@@ -12,6 +12,10 @@ async function handleSubmit(event) {
     event.preventDefault();
 
     let url = document.getElementById('name').value;
+    if (!checkUrl(url)){
+        alert('Incorrect URL');
+        return;
+    }
     try {
         
         const response = await fetch(`/api/submit-url?url=${encodeURIComponent(url)}`, {
